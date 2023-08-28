@@ -6,12 +6,16 @@ using namespace std;
 
 int main()
 {
-    vector<long> vec;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    
 
-    long x, n;
+    long x;
 
     while (cin >> x)
     {
+        vector<long> vec;
+        long n;
         cin >> n;
 
         x = x * 10000000;
@@ -19,8 +23,7 @@ int main()
         {
             long a;
             cin >> a;
-            if (a > 0 && a < 100000001)
-                vec.push_back(a);
+            vec.push_back(a);
         }
         sort(vec.begin(), vec.end());
         long first = 0, second = n - 1;
@@ -29,7 +32,7 @@ int main()
         {
             if (vec[first] + vec[second] == x)
             {
-                cout << "yes " << vec[first] << " " << vec[second];
+                cout << "yes " << vec[first] << " " << vec[second]<<endl;
                 wasSolutionFound = true;
                 break;
             }
@@ -44,8 +47,9 @@ int main()
         }
         if (!wasSolutionFound)
         {
-            cout << "danger";
+            cout << "danger"<<endl;
         }
+        vec.clear();
     }
     return 0;
 }
