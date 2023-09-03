@@ -2,6 +2,8 @@
 
 using namespace std;
 
+// Not solved.
+
 void solv(string s) {
     int size = 0;
     bool mayBeSorted = true;
