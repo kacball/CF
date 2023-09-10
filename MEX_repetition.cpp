@@ -16,6 +16,7 @@ void solv() { // Not done yet! TODO
         first -= a;
     }
     int tabpom[n+1];
+    cout<<"First is "<<first<<endl;
     for(int i = 0; i <= n; i++) {
         if(i == 0)
             tabpom[0] = first;
